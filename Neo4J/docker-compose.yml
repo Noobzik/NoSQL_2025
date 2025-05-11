@@ -1,0 +1,12 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    volumes:
+      - ./Neo4j-dataset.zip:/var/lib/neo4j/import/Neo4j-dataset.zip
+    environment:
+      - NEO4J_AUTH=neo4j/adm1n-adm1n
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+      - "7473:7473"
+    restart: always
