@@ -5,6 +5,8 @@ services:
       - ./Neo4j-dataset.zip:/var/lib/neo4j/import/Neo4j-dataset.zip
     environment:
       - NEO4J_AUTH=neo4j/adm1n-adm1n
+      - NEO4J_server_directories_import
+      - NEO4J_dbms_security_allow_csv_import_from_file_urls
     ports:
       - "7474:7474"
       - "7687:7687"
